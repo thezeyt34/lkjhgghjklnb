@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muno Mebel</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- КАСТОМНЫЙ КУРСОР -->
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+
+  <!-- МОБИЛЬНОЕ МЕНЮ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" data-i18n="nav_about" onclick="closeMobile()">О нас</a>
+    <a href="#values" data-i18n="nav_values" onclick="closeMobile()">Ценности</a>
+    <a href="#process" data-i18n="nav_process" onclick="closeMobile()">Процесс</a>
+    <a href="#team" data-i18n="nav_team" onclick="closeMobile()">Команда</a>
+    <a href="#location" data-i18n="nav_location" onclick="closeMobile()">Магазин</a>
+    <div class="mobile-menu-bottom">
+      <div class="lang-sw">
+        <button class="lang-btn active" data-lang="ru" onclick="applyLang('ru');closeMobile()">RU</button>
+        <button class="lang-btn" data-lang="en" onclick="applyLang('en');closeMobile()">EN</button>
+        <button class="lang-btn" data-lang="uz" onclick="applyLang('uz');closeMobile()">UZ</button>
+      </div>
+    </div>
+  </div>
+
+  <nav id="nav">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-dot"></div>
+      Muno Mebel
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about" data-i18n="nav_about">О нас</a></li>
+      <li><a href="#values" data-i18n="nav_values">Ценности</a></li>
+      <li><a href="#process" data-i18n="nav_process">Процесс</a></li>
+      <li><a href="#team" data-i18n="nav_team">Команда</a></li>
+      <li><a href="#location" data-i18n="nav_location">Магазин</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang-sw">
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="uz">UZ</button>
+      </div>
+      <button class="theme-btn" id="themeBtn">🌙</button>
+      <a href="#location" class="nav-cta" data-i18n="nav_contact">Связаться</a>
+      <button class="burger" id="burgerBtn" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-texture"></div>
+
+    <div class="hero-left">
+      <div class="hero-badge">🌿 <span data-i18n="hero_badge">Ташкент · С 2010 года</span></div>
+
+      <h1 class="hero-title">
+        <span data-i18n="hero_t1">Мебель,</span><br>
+        <span class="indent" data-i18n="hero_t2">которая</span><br>
+        <em data-i18n="hero_t3">живёт</em>&nbsp;<span data-i18n="hero_t4">в доме</span>
+      </h1>
+
+      <p class="hero-sub" data-i18n="hero_sub">
+        Muno Mebel — семейная мастерская в Ташкенте. Мы создаём мебель с душой: продуманную, тёплую и долговечную.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#about" class="btn-dark" data-i18n="hero_btn1">Узнать о нас</a>
+        <a href="#location" class="btn-ghost">
+          <span data-i18n="hero_btn2">Найти магазин</span>
+          <span class="ghost-arr">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hv-wrap">
+        <div class="hv-main">
+          <img src="https://i.pinimg.com/236x/34/68/96/346896828379c3d1da64b1ebb5569e72.jpg" alt="">
+        </div>
+
+        <div class="hv-top">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNW3awv7h00adhhkuwtKTrtPECSVkY5ZXMPA&s" alt="">
+        </div>
+
+        <div class="hv-stat">
+          <div class="hv-stat-num">15+</div>
+          <div class="hv-stat-lbl" data-i18n="hero_years">Лет опыта</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true">
+    <div class="strip-track">
+      <div class="strip-item"><strong data-i18n="strip_s">Диваны</strong> <span data-i18n="strip_hand">Ручная работа</span></div>
+      <div class="strip-item"><strong data-i18n="strip_c">Кресла</strong> <span data-i18n="strip_nat">Натуральные материалы</span></div>
+      <div class="strip-item"><strong data-i18n="strip_t">Столы</strong> <span data-i18n="strip_wood">Массив дерева</span></div>
+      <div class="strip-item"><strong data-i18n="strip_b">Кровати</strong> <span data-i18n="strip_custom">Индивидуальный заказ</span></div>
+      <div class="strip-item"><strong data-i18n="strip_w">Шкафы</strong> <span data-i18n="strip_gar">Гарантия 5 лет</span></div>
+      <div class="strip-item"><strong data-i18n="strip_s">Диваны</strong> <span data-i18n="strip_hand">Ручная работа</span></div>
+      <div class="strip-item"><strong data-i18n="strip_c">Кресла</strong> <span data-i18n="strip_nat">Натуральные материалы</span></div>
+      <div class="strip-item"><strong data-i18n="strip_t">Столы</strong> <span data-i18n="strip_wood">Массив дерева</span></div>
+      <div class="strip-item"><strong data-i18n="strip_b">Кровати</strong> <span data-i18n="strip_custom">Индивидуальный заказ</span></div>
+      <div class="strip-item"><strong data-i18n="strip_w">Шкафы</strong> <span data-i18n="strip_gar">Гарантия 5 лет</span></div>
+    </div>
+  </div>
+
+  <section id="about" class="sec-pad">
+    <div class="about-grid">
+
+      <div class="about-text-col reveal">
+        <div class="sec-label" data-i18n="about_label">История бренда</div>
+        <h2 class="sec-title" data-i18n="about_title">Мы делаем мебель так,<br>как делали <em>деды</em></h2>
+        <p class="about-p" data-i18n="about_p1">Muno Mebel начался в 2010 году с небольшой мастерской в Ташкенте. Основатель Мухаммад Нуров вложил в дело всё, что умел — уважение к дереву, честный труд и любовь к красивым вещам.</p>
+        <p class="about-p" data-i18n="about_p2">Сегодня мы — команда из 18 мастеров. Подход не изменился: никаких шаблонов, только живая работа руками и внимание к каждой детали.</p>
+        <blockquote class="about-quote">
+          <span data-i18n="about_quote">«Хорошая мебель — это не мода. Это память, которая передаётся из поколения в поколение.»</span>
+          <cite class="about-sig" data-i18n="about_cite">— Мухаммад Нуров, основатель</cite>
+        </blockquote>
+      </div>
+
+      <div class="reveal d2">
+        <div class="about-photo-grid">
+          <div class="ap-box tall">
+            <img src="https://www.tessutidelarte.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/w/h/whatsapp_image_2021-05-28_at_13.32.02.jpeg" alt="">
+          </div>
+
+          <div class="ap-box">
+            <img src="https://vsedlyastroiki.ru/pictures/images/3(96).jpg" alt="">
+          </div>
+
+          <div class="ap-box">
+            <img src="https://www.ecocertify.org/images/sustainable-furniture-and-home-decor.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="values" class="sec-pad" style="background: var(--bg2);">
+    <div class="vals-inner">
+      <div class="vals-header reveal">
+        <div class="sec-label" data-i18n="val_label">Наши принципы</div>
+        <h2 class="sec-title" data-i18n="val_title">Почему выбирают Muno Mebel</h2>
+        <p class="vals-sub" data-i18n="val_sub">Три вещи, которые мы никогда не компромиссим.</p>
+      </div>
+      <div class="vals-grid">
+        <div class="val-card reveal d1">
+          <span class="val-icon">🌳</span>
+          <h3 class="val-title" data-i18n="v1_t">Только натуральное</h3>
+          <p class="val-text" data-i18n="v1_p">Работаем с массивом дуба, ясеня и ореха. Никаких ДСП. Натуральное дерево дышит и служит десятилетиями.</p>
+        </div>
+        <div class="val-card reveal d2">
+          <span class="val-icon">🤝</span>
+          <h3 class="val-title" data-i18n="v2_t">Честная цена</h3>
+          <p class="val-text" data-i18n="v2_p">Производим сами — без посредников. Смета прозрачна с первого дня, никаких скрытых доплат.</p>
+        </div>
+        <div class="val-card reveal d3">
+          <span class="val-icon">🎨</span>
+          <h3 class="val-title" data-i18n="v3_t">Под ваш интерьер</h3>
+          <p class="val-text" data-i18n="v3_p">Каждый заказ — отдельный проект. Мебель под размер вашей комнаты, ваш цвет и образ жизни.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="nums-section">
+    <div class="nums-grid">
+      <div class="num-item reveal d1"><div class="num-val">15+</div><div class="num-lbl" data-i18n="n1">Лет на рынке</div></div>
+      <div class="num-item reveal d2"><div class="num-val">1 200</div><div class="num-lbl" data-i18n="n2">Довольных семей</div></div>
+      <div class="num-item reveal d3"><div class="num-val">18</div><div class="num-lbl" data-i18n="n3">Мастеров</div></div>
+      <div class="num-item reveal d4"><div class="num-val">5</div><div class="num-lbl" data-i18n="n4">Лет гарантии</div></div>
+    </div>
+  </div>
+
+  <section id="process" class="sec-pad">
+    <div class="proc-inner">
+      <div class="reveal">
+        <div class="sec-label" data-i18n="proc_label">Как мы работаем</div>
+        <h2 class="sec-title" data-i18n="proc_title">От встречи до <em>готовой мебели</em></h2>
+      </div>
+      <div class="proc-steps">
+        <div class="proc-step reveal d1">
+          <div class="proc-circle">01</div>
+          <h3 class="proc-title" data-i18n="s1_t">Встреча</h3>
+          <p class="proc-text" data-i18n="s1_p">Приезжаем к вам или принимаем в шоуруме. Слушаем, задаём вопросы, замеряем. Без давления.</p>
+        </div>
+        <div class="proc-step reveal d2">
+          <div class="proc-circle">02</div>
+          <h3 class="proc-title" data-i18n="s2_t">Проект</h3>
+          <p class="proc-text" data-i18n="s2_p">3D-визуализация вашей мебели в вашем интерьере до начала работы.</p>
+        </div>
+        <div class="proc-step reveal d3">
+          <div class="proc-circle">03</div>
+          <h3 class="proc-title" data-i18n="s3_t">Изготовление</h3>
+          <p class="proc-text" data-i18n="s3_p">Мастера работают руками. Каждая деталь проверяется трижды. Срок — 4–6 недель.</p>
+        </div>
+        <div class="proc-step reveal d4">
+          <div class="proc-circle">04</div>
+          <h3 class="proc-title" data-i18n="s4_t">Доставка</h3>
+          <p class="proc-text" data-i18n="s4_p">Привозим, собираем, убираем за собой. Гарантия 5 лет с первого дня.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="sec-pad team-section">
+    <div class="team-inner">
+      <div class="team-header reveal">
+        <div class="sec-label" data-i18n="team_label">Наша команда</div>
+        <h2 class="sec-title" data-i18n="team_title">Люди за мебелью</h2>
+      </div>
+      <div class="team-grid">
+
+        <div class="team-card reveal d1">
+          <div class="team-photo">
+            <div class="team-photo-ph">
+              <div class="team-photo-icon">🖼</div>
+              <img src="https://srccs.su/wp-content/uploads/2017/08/keis7.jpg" alt="">
+            </div>
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Мухаммад Нуров</h3>
+            <div class="team-role" data-i18n="t1_role">Основатель · Мастер</div>
+            <p class="team-bio" data-i18n="t1_bio">25 лет работы с деревом. Начинал с отцовской мастерской, сегодня руководит командой.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal d2">
+          <div class="team-photo">
+            <div class="team-photo-ph">
+              <div class="team-photo-icon">🖼</div>
+              <img src="https://adpo-edu.ru/uplfile/menedzher-proektov.png" alt="">
+            </div>
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Дилноза Юсупова</h3>
+            <div class="team-role" data-i18n="t2_role">Главный дизайнер</div>
+            <p class="team-bio" data-i18n="t2_bio">10 лет опыта в интерьерном дизайне. Превращает идеи в точные технические задания.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal d3">
+          <div class="team-photo">
+            <div class="team-photo-ph">
+              <div class="team-photo-icon">🖼</div>
+              <img src="https://www.kickidler.ru/assets/images/articles/2353.jpg" alt="">
+            </div>
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Акбар Рашидов</h3>
+            <div class="team-role" data-i18n="t3_role">Менеджер проектов</div>
+            <p class="team-bio" data-i18n="t3_bio">Следит за сроками. Первый ответит на ваш звонок.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="location" class="sec-pad">
+    <div class="loc-inner">
+
+      <div class="reveal">
+        <div class="sec-label" data-i18n="loc_label">Наш шоурум</div>
+        <h2 class="sec-title" style="margin-bottom:20px" data-i18n="loc_title">Приходи, потрогай <em>вживую</em></h2>
+        <p class="loc-desc" data-i18n="loc_desc">В нашем шоуруме вы можете увидеть все коллекции, почувствовать материалы и поговорить с дизайнером. Вход свободный — будем рады.</p>
+        <div class="loc-items">
+          <div class="loc-row">
+            <div class="loc-icon">📍</div>
+            <div>
+              <div class="loc-rtitle" data-i18n="loc_addr_t">Адрес</div>
+              <div class="loc-rval">Ташкент, ул. Амира Темура, 107Б<br>ТЦ «Tashkent City», 2-й этаж</div>
+            </div>
+          </div>
+          <div class="loc-row">
+            <div class="loc-icon">🕐</div>
+            <div>
+              <div class="loc-rtitle" data-i18n="loc_hours_t">Часы работы</div>
+              <div class="loc-rval" data-i18n="loc_hours_v">Пн–Сб: 10:00–20:00 · Вс: 11:00–18:00</div>
+            </div>
+          </div>
+          <div class="loc-row">
+            <div class="loc-icon">📞</div>
+            <div>
+              <div class="loc-rtitle" data-i18n="loc_phone_t">Телефон</div>
+              <div class="loc-rval">+998 71 200-00-00</div>
+            </div>
+          </div>
+          <div class="loc-row">
+            <div class="loc-icon">📱</div>
+            <div>
+              <div class="loc-rtitle">Telegram / Instagram</div>
+              <div class="loc-rval">@munomebel</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-box reveal d2">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=69.24%2C41.29%2C69.32%2C41.34&layer=mapnik&marker=41.3111%2C69.2797"
+          allowfullscreen loading="lazy" title="Muno Mebel Showroom">
+        </iframe>
+        <div class="map-pin">📍 Muno Mebel · Ташкент</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-rings"><span></span><span></span><span></span></div>
+    <div class="cta-inner reveal">
+      <h2 class="cta-title" data-i18n="cta_title">Создадим мебель вашей <em>мечты</em></h2>
+      <p class="cta-text" data-i18n="cta_text">Оставьте заявку — наш дизайнер позвонит в течение часа и предложит идеи бесплатно.</p>
+      <div class="cta-btns">
+        <a href="tel:+998712000000" class="btn-honey" data-i18n="cta_call">Позвонить нам</a>
+        <a href="https://t.me/munomebel" class="btn-outline-light">Telegram →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Muno <span>Mebel</span></div>
+    <ul class="footer-nav">
+      <li><a href="#about" data-i18n="nav_about">О нас</a></li>
+      <li><a href="#values" data-i18n="nav_values">Ценности</a></li>
+      <li><a href="#process" data-i18n="nav_process">Процесс</a></li>
+      <li><a href="#team" data-i18n="nav_team">Команда</a></li>
+      <li><a href="#location" data-i18n="nav_location">Магазин</a></li>
+    </ul>
+    <span class="footer-copy">© 2025 Muno Mebel · Ташкент</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
